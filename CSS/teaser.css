@@ -1,0 +1,82 @@
+
+
+.teaser-text {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  text-align: center;
+}
+
+.teaser-title-primary,
+.teaser-title-secondary {
+  
+  word-wrap: break-word;
+  color: var(--color1); /* Color por defecto */
+}
+
+/* Color específico para el título secundario */
+.teaser-title-secondary {
+  color: var(--color2); /* Usar el color 2 para el título secundario */
+}
+
+/* Estilos para el video */
+.video-container {
+  position: relative;
+  padding: 2% 0;
+  width: 100%;
+  max-width: 100vw;
+  margin: 5vh auto;
+  background-image: url(../Assets/IMG/Teaser-bg.png);
+  background-size: 70%;  /* Ajuste automático de la imagen al tamaño del contenedor */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.video-wrapper {
+  width: 60%;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: ceneter;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding-bottom: 0px;
+}
+
+.video {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+
+  -webkit-mask-image: url('../Assets/IMG/Teaser-mask-blanco.png');
+  mask-image: url('../Assets/IMG/Teaser-mask-blanco.png');
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  overflow: hidden;  /* Oculta cualquier parte del iframe que quede fuera del área de la máscara */
+}
+
+.video-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.0;
+  pointer-events: none;
+}
+
+
+
+
+.teaser h2{
+  background-image: url(../Assets/IMG/BGSubT.png);
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */   
+}

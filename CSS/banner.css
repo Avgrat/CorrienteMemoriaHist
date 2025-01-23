@@ -1,0 +1,49 @@
+/* Estilos generales (para móviles como base) */
+.banner {
+    position: relative; /* Necesario para el posicionamiento del video */
+    margin: 0;
+    padding: 0; /* Reducir padding del banner en móviles */
+    width: 100%;
+    height: 100vh; /* Aseguramos que el banner ocupe toda la pantalla */
+    display: flex;
+    justify-content: left; /* Posición en X */
+    align-items: center; /* Posición en Y */
+    overflow: hidden; /* Asegura que nada sobresalga */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Estilo del video de fondo */
+.banner-video {
+    position: absolute; /* Posicionar el video detrás del contenido */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1; /* Asegúrate de que el video esté detrás */
+    transform: translate(-50%, -50%); /* Centrar el video */
+    object-fit: cover; /* Asegura que el video cubra todo el espacio */
+}
+
+/* Contenido del banner */
+.banner-content {
+    margin-left: 5vw;   
+    position: relative; /* Necesario para que el contenido esté encima del video */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo con opacidad para contraste */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    padding: 1rem;
+    width: 100%; /* Ajuste de ancho */
+    max-width: 600px; /* Limitar el ancho máximo */
+    z-index: 10; /* Asegúrate de que el texto esté por encima */
+    text-align: left; /* Alineación del texto a la izquierda */
+    color: var(--color1); /* Color del texto */
+    display: flex; /* Activar Flexbox */
+    flex-direction: column; /* Colocar los elementos en columna */
+    justify-content: flex-start; /* Alineación vertical hacia la parte superior */
+    align-items: flex-start; /* Alineación horizontal a la izquierda */
+}
+
+.buttons .btn-transparent{
+    color: black;
+}

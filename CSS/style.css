@@ -1,0 +1,196 @@
+/* Importar la fuente Lato desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@font-face {
+  font-family: 'POORICH';
+  src: url('../Assets/Fonts/POORICH.TTF') format('truetype');
+} 
+@font-face {
+  font-family: 'HTOWERT';
+  src: url('../Assets/Fonts/HTOWERT.TTF') format('truetype');
+} 
+
+
+/* Definir las variables de color en :root */
+:root {
+  --color1: #192c43;  /* Azul */
+  --color2: #252525;  /* Rojo */
+  --color3: #2ecc71;  /* Verde */
+  --color4: #252525;  /* Amarillo */
+  --color5: #9b59b6;  /* Púrpura */
+  --color6: #ffffff;  /* blanco */
+
+  --font-size-h1: 2.5rem;  /* Tamaño de fuente para h1 */
+  --font-size-h2: 2.0rem;  /* Tamaño de fuente para h2 */
+  --font-size-h3: 2.0rem;  /* Tamaño de fuente para h3 */
+  --font-size-h4: 1.5rem;  /* Tamaño de fuente para h4 */
+  --font-size-h5: 2rem;  /* Tamaño de fuente para h5 */
+  --font-size-h6: 1.5rem;  /* Tamaño de fuente para h6 */
+  --font-size-p: 1rem;  /* Tamaño de fuente para párrafos */
+}
+
+/* Resetear márgenes y padding para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Establecer la tipografía global */
+body {
+  font-family: Arial, sans-serif;  /* Tipografía predeterminada para el cuerpo */
+  background-color: #e3e3e3;
+  background-image: url(../Assets/IMG/WEBbg2.png);
+background-size: 100% auto; /* Ajusta el fondo al ancho, mantiene la proporción en el alto */
+background-repeat: repeat-y; /* Hace que el fondo se repita en el eje vertical */
+
+}
+
+/* Estilo para los encabezados (h1 a h6) */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;  /* Margen inferior para separar de otros elementos */
+}
+
+/* Tipografía específica para h1 y h2 */
+h1, h2 {
+  font-family: 'Lato', sans-serif;  /* Usar Lato para h1 y h2 */
+}
+
+/* Estilos para h1 a h6 */
+h1 {
+  font-size: var(--font-size-h1);
+  
+  font-family: 'HTOWERT';
+  color: var(--color1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  
+  font-family: 'HTOWERT';
+  color: var(--color2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  
+  font-family: 'HTOWERT';
+  color: var(--color1);
+} 
+
+h4 {
+  font-size: var(--font-size-h4);
+  color: var(--color4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  color: var(--color5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  color: var(--color1);
+}
+
+h2 span.color1 {
+  color: var(--color1); /* Verde para "Relatos de" */
+}
+
+h2 span.color2 {
+  color: var(--color2); /* Negro para "vida en" */
+}
+
+h1 span.color1 {
+  color: var(--color1); /* Verde para "Relatos de" */
+}
+
+h1 span.color2 {
+  color: var(--color2); /* Negro para "vida en" */
+}
+
+
+/* Estilo para los párrafos */
+p {
+  font-size: var(--font-size-p);
+  color: var(--color6);
+  line-height: 1.5;  /* Espaciado de línea */
+  margin-bottom: 1em;  /* Espacio inferior */
+}
+
+/* Estilos de los botones */
+/* Estilo general de los botones */
+button {
+  padding: 10px 20px; /* Tamaño del botón */
+  font-size: 1rem; /* Tamaño de fuente para el texto */
+  font-family: Arial, sans-serif; /* Tipografía para el texto del botón */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+/* Botón con fondo color1 */
+button.btn-primary {
+  background-color: var(--color1); /* Fondo azul */
+  color: white; /* Texto blanco */
+}
+
+button.btn-primary:hover {
+  background-color: darken(var(--color1), 10%); /* Efecto hover más oscuro */
+  color: black;
+}
+
+/* Botón transparente con borde y texto color1 */
+button.btn-transparent {
+  background-color: transparent; /* Fondo transparente */
+  color: var(--color1); /* Texto azul */
+  border: 2px solid var(--color1); /* Borde azul */
+}
+
+button.btn-transparent:hover {
+  background-color: var(--color1); /* Fondo azul al hacer hover */
+  color: white; /* Texto blanco al hacer hover */
+}
+
+/* Estilos para el ícono dentro del botón */
+button.btn-transparent i {
+  margin-right: 8px; /* Espaciado entre el ícono y el texto */
+}
+
+
+/* Estilos responsive */
+@media (max-width: 1200px) {
+  :root {
+    --font-size-h1: 3.5rem;
+    --font-size-h2: 3rem;
+    --font-size-h3: 2.5rem;
+    --font-size-h4: 2rem;
+    --font-size-h5: 1.75rem;
+    --font-size-h6: 1.25rem;
+    --font-size-p: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h3: 2rem;
+    --font-size-h4: 1.75rem;
+    --font-size-h5: 1.5rem;
+    --font-size-h6: 1.25rem;
+    --font-size-p: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1.1rem;
+    --font-size-p: 0.8rem;
+  }
+}

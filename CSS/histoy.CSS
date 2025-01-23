@@ -1,0 +1,96 @@
+.histoy-nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: space-between;
+}
+
+.puntoRojo {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #C8AA97;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+}
+
+.puntoAzul {
+    position: absolute; /* Esto permite que el punto se mueva */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(76, 0, 255);
+    z-index: 500;
+}
+
+.barcoimg {
+    position: absolute; /* Imagen posicionada dentro del punto */
+    width: 80px; /* Tamaño de la imagen */
+    height: 80px;
+    background-color: #ccc; /* Simulación de placeholder */
+    display: block;
+    text-align: center;
+    line-height: 80px;
+    font-size: 14px;
+    color: white;
+    border-radius: 8px;
+    top: 50%; /* Centra la imagen verticalmente en el punto */
+    left: 50%; /* Centra la imagen horizontalmente en el punto */
+    transform: translate(-50%, -50%); /* Ajuste para centrar la imagen */
+}
+
+
+.histoy-caqueta, .histoy-Guaviare, .histoy-AMAZONAS {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 0 5vw;  /* Simplificado para aplicar el padding de forma uniforme */
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;  /* Usé solo esta propiedad para centrar elementos en el eje transversal */
+}
+
+.histoy-putumayo, .histoy-baupez{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 0 0vw;  /* Simplificado para aplicar el padding de forma uniforme */
+    box-sizing: border-box;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center ;  /* Usé solo esta propiedad para centrar elementos en el eje transversal */
+}
+
+.content-text{
+    flex: 1; /* Ambas columnas ocupan el mismo ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-text {
+    padding: 20px; /* Asegura que haya espacio entre el texto y la imagen */
+    background-image: url(../Assets/IMG/BG_MenuPopUP.png);
+    border-radius: 2%;
+    
+}
+.content-text,
+.content-image {
+    flex: 1;           /* Ambos ocuparán el mismo espacio */
+    padding: 5vw;       /* Espaciado interno de manera uniforme */
+}
+
+.content-image img {
+    width: 100%;        /* La imagen ocupará todo el ancho disponible */
+    height: auto;       /* Mantener las proporciones de la imagen */
+  
+}
