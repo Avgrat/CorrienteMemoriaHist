@@ -191,7 +191,18 @@ width: 3rem;
 
 /* Asegurando que las imágenes de los íconos sean círculos */
 .idiomas ul li img, .redes ul li img {
-  border-radius: 50%; /* Hace que las imágenes sean círculos */
-  filter: grayscale(100%);
+  border-radius: 50%;  /* Hace que las imágenes sean círculos */
+  filter: grayscale(60%);
+  
+  
+}
+
+
+.idiomas ul li img:hover {
+  border-radius: 50%;  /* Hace que las imágenes sean círculos */
+  filter: grayscale(0%);
+
+  
+  
 }
 
