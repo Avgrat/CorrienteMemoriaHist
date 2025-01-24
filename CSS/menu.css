@@ -1,149 +1,196 @@
-/* Estilos para el encabezado y navegación */
-header {
-  background-color: var(--color1); /* Color de fondo del menú */
-  padding: 5px 5vw; /* Espaciado lateral */
-  position: fixed; /* Fija el encabezado en la parte superior */
-  top: 0; /* Posición en la parte superior de la pantalla */
-  width: 100%; /* Ancho completo de la ventana */
-  z-index: 1000; /* Asegura que el menú esté encima de otros elementos */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para el menú */
-}
 
-/* Estilos para el menú */
-.menu {
-  display: flex;
-  justify-content: space-between; /* Acomoda los elementos a los extremos */
-  align-items: center; /* Centra verticalmente los elementos */
-  width: 100%;
-  padding: 0 5vw; /* Espaciado horizontal */
-}
 
-/* Estilos para la parte izquierda del menú */
-.menu-left {
-  display: flex;
-  gap: 10px; /* Espaciado entre los logos */
-}
+  /* Header and navigation styles */
+  header {
+    background-color: var(--color1); /* Color de fondo del menú */
+    padding: 5px 5vw; /* Espaciado lateral */
+    position: fixed; /* Hace que el menú sea fijo en la parte superior */
+    top: 0; /* Lo posiciona al inicio de la pantalla */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho de la ventana */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional, añade un pequeño sombreado */
+  }
 
-.menu-left img.logo {
-  height: 40px; /* Altura de los logos */
-  margin: 4px;
-  width: auto; /* Mantiene la proporción de la imagen */
-}
+  .menu {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-/* Estilos para el centro del menú */
-.menu-center {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Centra los elementos del menú */
-}
+  .menu-left {
+    display: flex;
+    gap: 10px; /* Espacio entre los logos */
+  }
 
-/* Estilos de los elementos de lista del menú */
-.menu-center ul {
-  list-style-type: none;
-  display: flex; /* Los elementos del menú están en fila */
-}
+  .menu-center {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+  }
 
-.menu-center ul li {
-  margin: 0 15px; /* Espaciado entre los elementos del menú */
-  position: relative; /* Necesario para la línea separadora */
-}
+  .menu-left img.logo {
+    height: 40px;
+    margin: 4px;
+    width: auto;
+  }
 
-/* Línea separadora entre los elementos del menú */
-.menu-center ul li:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: -7px;
-  top: 0;
-  height: 30px;
-  border-right: 1px solid white;
-}
+  .menu-center ul {
+    list-style-type: none;
+    display: flex; /* Los elementos del menú estarán en fila */
+    flex-direction: row;
+  }
 
-/* Estilos para los enlaces del menú */
-.menu-center ul li a {
-  color: #e9d3ab; /* Color del texto */
-  text-decoration: none;
-  font-family: 'HTOWERT'; /* Fuente personalizada */
-  font-size: 16px;
-  padding: 5px 10px; /* Espaciado alrededor del texto */
-}
+  .menu-center ul li {
+    margin: 0 15px;
+    position: relative; /* Necesario para la línea separadora */
+  }
 
-/* Efecto hover en los enlaces */
-.menu-center ul li a:hover {
-  text-decoration: underline; /* Subraya el texto al pasar el ratón */
-}
+  /* Estilo de la línea separadora */
+  .menu-center ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: 0;
+    height: 30px;
+    border-right: 1px solid white;
+  }
 
-/* Estilos para el submenú (oculto inicialmente) */
-.submenu {
-  display: none; /* Inicialmente oculto */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--color1); /* Fondo igual al del menú */
-  min-width: 200px; /* Ancho mínimo */
-  padding: 5px 0;
-}
+  .menu-center ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'HTOWERT';
+    color: #e9d3ab;
+    font-size: 16px;
+    padding: 5px 10px; /* Añadir algo de espacio alrededor del texto */
+  }
 
-/* Mostrar submenú cuando se pasa el ratón */
-.menu-item-has-children:hover .submenu {
-  display: block;
-}
+  .menu-center ul li a:hover {
+    text-decoration: underline;
+  }
 
-/* Estilos para los elementos dentro del submenú */
-.submenu li {
-  margin: 0;
-}
+  /* Estilo para el submenú */
+  .submenu {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color1); /* Asegura que el submenú tenga el mismo fondo */
+    min-width: 200px; /* Ancho mínimo para el submenú */
+    padding: 5px 0;
+  }
 
-.submenu li a {
-  padding: 10px 20px;
-  font-size: 14px;
-}
+  .menu-item-has-children:hover .submenu {
+    display: block; /* Mostrar el submenú cuando se pasa el ratón por encima */
+  }
 
-/* Efecto hover en los enlaces del submenú */
-.submenu li a:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo suave en hover */
-}
+  .submenu li {
+    margin: 0;
+  }
 
-/* Estilos para las redes sociales */
-.menu-right {
-  display: flex;
-  justify-content: space-between; /* Espaciado entre los elementos */
-  align-items: center;
-  gap: 20px; /* Espaciado entre los íconos */
-}
+  .submenu li a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 
-.menu-right ul {
-  list-style-type: none;
-  display: flex; /* Los íconos de redes sociales están en fila */
-}
+  .submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover para los items del submenú */
+  }
 
-.menu-right ul li a {
-  color: white; /* Color de los enlaces */
-  text-decoration: none;
-  font-size: 16px;
-}
+  /* Estilo para las redes sociales */
+  .menu-right ul {
+    list-style-type: none;
+    display: flex; /* Los íconos de redes sociales estarán en fila */
+    gap: 15px; /* Espacio entre los íconos */
+  }
 
-/* Efecto hover para los enlaces de redes sociales */
-.menu-right ul li a:hover {
-  text-decoration: underline;
-}
+  .menu-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
 
-/* Estilos para las imágenes de las redes sociales */
-.menu-right .redes ul li a img {
-  filter: brightness(0) invert(1); /* Cambia los íconos SVG a blanco */
-}
+  .menu-right ul li a:hover {
+    text-decoration: underline;
+  }
 
-/* Estilos para los íconos de redes sociales */
+
+
+  /* Estilo para el submenú */
+  .submenu {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color1); /* Asegura que el submenú tenga el mismo fondo */
+    min-width: 200px; /* Ancho mínimo para el submenú */
+    padding: 5px 0;
+  }
+
+  .submenu.show {
+    display: block; /* Mostrar el submenú cuando la clase 'show' esté activa */
+  }
+
+  .submenu li {
+    margin: 0;
+  }
+
+  .submenu li a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover para los items del submenú */
+  }
+
+
+  /* Estilo para el submenú */
+  .submenu {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color1); /* Asegura que el submenú tenga el mismo fondo */
+    min-width: 200px; /* Ancho mínimo para el submenú */
+    padding: 5px 0;
+  }
+
+  .menu-item-has-children:hover .submenu {
+    display: block; /* Mostrar el submenú cuando se pasa el ratón por encima */
+  }
+
+  .submenu li {
+    margin: 0;
+  }
+
+  .submenu li a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover para los items del submenú */
+  }
+
+
+  .menu-right .redes ul li a img {
+    filter: brightness(0) invert(1); /* Aplica un filtro para hacer el SVG blanco */
+  } 
+
+  /* Estilo para las redes sociales */
 .menu-right ul .redes {
   list-style-type: none;
-  display: flex; /* Los íconos están en fila */
-  gap: 15px; /* Espaciado entre los íconos */
+  display: flex; /* Los íconos estarán en fila */
+  gap: 15px; /* Espacio entre los íconos */
   justify-content: center; /* Centra los íconos horizontalmente */
   align-items: center; /* Centra los íconos verticalmente */
 }
 
-/* Estilos para los enlaces dentro de las redes sociales */
 .menu-right ul .redes li a {
-  display: flex;
+  display: flex; /* Necesario para alinear los iconos dentro del <a> */
   justify-content: center;
   align-items: center;
   color: white;
@@ -151,46 +198,21 @@ header {
   font-size: 16px;
 }
 
-/* Estilos para los idiomas (íconos de banderas) */
-.idiomas ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 10px; /* Espaciado entre los íconos de idioma */
+
+
+.menu-right {
+  display: flex ;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 10px;
+      column-gap: 20px;
 }
 
-.idiomas ul li {
-height: 1.5rem;
-width: 3rem;
-}
-
-.idiomas ul li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px; /* Borde redondeado */
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* Botón de idioma inglés */
-.btn-usa {
-  background-image: url('../Assets/SVG/usa.jpg');
-}
-
-/* Botón de idioma español */
-.btn-esp {
-  background-image: url('../Assets/SVG/esp.jpg');
+/* Asegurando que las imágenes sean redondeadas */
+.idiomas ul li img, .redes ul li img {
+  border-radius: 50%;  /* Hace que las imágenes sean círculos */
   
 }
-
-/* Asegurando que las imágenes de los íconos sean círculos */
-.idiomas ul li img, .redes ul li img {
-  border-radius: 50%; /* Hace que las imágenes sean círculos */
-}
-
